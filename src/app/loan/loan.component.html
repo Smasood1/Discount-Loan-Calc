@@ -1,1 +1,40 @@
-<p>loan works!</p>
+<div class="conatiner=fluid">
+    <div class="row">
+        <div class="table-responsive-sm">
+            <h1 style="color: deepskyblue;">Loan Calculator</h1>
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <form action="">
+                      <div class="form-group">
+                        <label class="price" for="inputStartPrice">Loan Amount</label>
+                        <input type="number" [(ngModel)]="amount" class="form-control" placeholder="$" name="Amount">
+                      </div>
+                      <div class="form-group">
+                        <label class="price" for="inputDiscount">Interest Rate</label>
+                        <input type="number" [(ngModel)]="rate" class="form-control" placeholder="%" name="Rate">
+                      </div>
+                      <div class="form-group">
+                        <label class="price" for="inputDiscount">Number of Months</label>
+                        <input type="number" [(ngModel)]="months" class="form-control" placeholder="" name="Months">
+                      </div>
+                      <button type="button" id="calcDiscount" (click)="monthlyPayCalc()">Calc Monthly Pay</button>
+                    </form>
+                  </div>
+                  <div class="col-md-3"></div>
+                </div>
+            
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <h4>You Will Pay: {{monthlyPayment}}</h4>
+                  </div>
+                  <div class="col-md-3"></div>
+                </div>
+              </div>
+        </div>
+
+    </div>
+</div>
+
